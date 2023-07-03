@@ -5,8 +5,14 @@
       <router-link to="/about">About</router-link>
     </nav>
     <router-view />
+    <div @click="refNum++">{{ refNum }}</div>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { ref } from "vue";
+const refNum = ref<number>(1);
+</script>
 
 <style lang="scss">
 #app {
